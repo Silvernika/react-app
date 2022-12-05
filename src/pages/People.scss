@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&family=Source+Sans+Pro&display=swap');
+
+.People_page{
+    padding-top:7%;
+    background-image: url("../images/white-back.webp");
+  }
+
+  .Person{
+    padding-top:5%;
+    padding-left: 15%;
+    display:flex;
+    padding-bottom: 10%;
+  }
+
+  .information{
+    font-family:"Lato";
+  }
+
+  .picture{
+    padding-left: 5%;
+  }
+  .photo{
+    width:40%;
+  }
+
+  .photo_3{
+    width:55%;
+  }
+
+  .photo_4{
+    width:60%;
+  }

@@ -1,0 +1,19 @@
+.Footer{
+    padding-top:2%;
+    background-color: black;
+    color:white;
+    font-family: "Source Sans Pro";
+  }
+
+.Developer{
+    display:flex;
+    justify-content: space-between;
+}
+
+.Avatar{
+    width:30%;
+    border-radius: 90%;
+    border: 3px solid green;
+    margin-bottom: 2%;
+}
+

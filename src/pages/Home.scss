@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&family=Source+Sans+Pro&display=swap');
+
+.Block{
+    position: absolute;
+    font-style: italic;
+    padding-top: 2%;
+  }
+  
+  .Achitecture_of_day{
+    padding-left: 15%;
+    background-image: url("../images/white-back.webp");
+    display:flex;
+    padding-bottom: 10%;
+  }
+  .pic{
+    width:100%;
+  }
+  
+  .levin{
+    width:50%;
+  }
+  .pic_of_day{
+    padding-top: 10%;
+    padding-left: 5%;
+  }
+  
+  .title_of_day{
+    font-family: "Roboto";
+    padding-top: 10%;
+    padding-left:10%;
+  }
+  
+  .title_information{
+    font-family:"Lato";
+  }
+  
