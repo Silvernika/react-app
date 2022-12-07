@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&family=Source+Sans+Pro&display=swap');
+
+.person_page{
+    padding-left: 7%;
+    background-image: url("../images/white-back.webp");
+    display:flex;
+    padding-bottom: 10%;
+    flex-direction: column;
+}
+
+.text_info{
+    font-family: "Roboto";
+    padding-top: 10%;
+    padding-left:10%;
+}
+
+.main_text p{
+    font-family:"Lato";
+}
+
+.person_picture{
+    padding-top: 10%;
+    padding-left: 5%;
+}
+
+.main_info{
+    display:flex;
+    flex-direction: row;    
+}
+
+.image_galery{
+    display:flex;
+    flex-direction: column;
+}
+
+.galery_row{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.galery_photo{
+    width: 20vw;
+    height: auto;
+}
