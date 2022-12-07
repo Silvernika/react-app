@@ -5,7 +5,7 @@ import Levin from '../images/levin.jpg'
 
 export const Home = () => {
     return (
-        <Fragment>
+      <Fragment>
         <img src= {Back} className="pic" alt="pic"/> 
         <div className='Block'>
           <h2><u>Деятель Дня:</u></h2>
@@ -22,14 +22,14 @@ export const Home = () => {
               Председатель Союза белорусских еврейских общественных объединений и общин с 1991 года.<br/>
               Один из авторов мемориального комплекса «Хатынь»,<br/>
               за который (в составе авторского коллектива) был удостоен Ленинской премии.</p>
-             <a href="/Levin" class="link-primary">Читать полностью</a>
+              <a href="/Levin" class="link-primary">Читать полностью</a>
             </div>
           </div>
           <div className='pic_of_day'>
             <img src={Levin} className="levin" alt="levin"/>
           </div>
         </div>
-       </Fragment>
+      </Fragment>
 
     )
 }
