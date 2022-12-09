@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, {Component, Fragment} from 'react';
 import './Person.scss'
 import LevinImg from '../images/levin.jpg'
 import RedBeach from '../images/red_beach.jpg'
@@ -8,6 +8,27 @@ import Proryv from '../images/proryv.jpg'
 import Suburb from '../images/Traeckaje_suburb.jpg'
 import Subway from '../images/Nyamiga.jpg'
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
+import { YMaps, Map, Placemark } from "react-yandex-maps"
+import YouTube from 'react-youtube';
+
+
+class MediaPlayerComponent extends Component {
+    render() {
+        const opts = {
+        playerVars: {
+        autoplay: 1,
+        },
+    };
+
+    return <YouTube videoId="P2-yBJvcJUo" opts={opts} width='100%' height='100%' onReady={this._onReady} />;
+    }
+
+    _onReady(event) {
+    event.target.pauseVideo();
+    }
+}
+
+
 
 export const Levin = () => {
     return (
@@ -83,18 +104,39 @@ export const Levin = () => {
                         </TimelineItem>
                     </Timeline>
                 </div>
+                <h4>Наиболее значимые работы</h4>
                 <div className='image_galery'>
-                    <div className='galery_row'>
+                    {/* <div className='galery_row'> */}
                         <img src={Hatyn} className="galery_photo" alt="hatyn"/>
                         <img src={RedBeach} className="galery_photo" alt="red beach"/>
                         <img src={GettoMemorial} className="galery_photo" alt="getto memorial"/>
-                    </div>
-                    <div className='galery_row'>
+                    {/* </div>
+                    <div className='galery_row'> */}
                         <img src={Proryv} className="galery_photo" alt="breakthrough"/>
                         <img src={Suburb} className="galery_photo" alt="suburb"/>
                         <img src={Subway} className="galery_photo" alt="nemiga"/>
-                    </div>
+                    {/* </div> */}
                 </div>
+                <div className='video-player'>
+                    <MediaPlayerComponent/>
+                </div>
+                <div className="maps">
+                    <YMaps query={{mode: 'release'}}>
+                        <h4>Работы Левина Л.М. на карте</h4>
+                        <Map
+                        width="60vw"
+                        height="50vh" 
+                        defaultState={{center : [53.906030, 27.554072], zoom: 6}}
+                        >
+                            <Placemark geometry={[53.906030, 27.554072]}/>
+                            <Placemark geometry={[53.910362, 27.542329]}/>
+                            <Placemark geometry={[54.334775, 27.943737]}/>
+                            <Placemark geometry={[55.205518, 28.493428]}/>
+                            <Placemark geometry={[53.908464, 27.556129]}/>
+                            <Placemark geometry={[52.963093, 29.776019]}/>
+                        </Map>  
+                    </YMaps> 
+                </div>     
             </div>
         </Fragment>
     )

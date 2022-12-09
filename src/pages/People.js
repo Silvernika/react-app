@@ -28,7 +28,7 @@ export const People = () => {
              </div>
              <div className='Person'>
                 <div className='Name'>
-                  <h3>Александр Петрович Воинов</h3>
+                  <h3>Воинов Александр Петрович</h3>
                   <p>1902-1987</p>
                 <div className='information'>
                  <p>Архитектор, автор здания ЦК КПБ (Администрации Президента Республики Беларусь).<br/>
