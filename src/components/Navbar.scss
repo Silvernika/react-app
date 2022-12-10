@@ -10,8 +10,9 @@
 
 .en-button {
     margin-left: 1rem;
-    background-color: #f5f5f5;
-    border-width: 1px;
+    color: #f5f5f5;
+    background-color: RGB(220, 53, 69);
+    border-width: 0;
     padding: 0.25rem 0.5rem;
     font-size: 1.2rem;
     font-weight: 400;
@@ -25,8 +26,9 @@
 }
 
 .ru-button {
-    background-color: #f5f5f5;
-    border-width: 1px;
+    background-color: RGB(220, 53, 69);
+    color: #f5f5f5;
+    border-width: 0;
     padding: 0.25rem 0.5rem;
     font-size: 1.2rem;
     font-weight: 400;
