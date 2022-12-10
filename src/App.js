@@ -1,15 +1,15 @@
 import React from 'react'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import {Home} from './pages/Home'
-import {People} from './pages/People'
-import {Levin} from './pages/Levin'
-import {Zaborsky} from './pages/Zaborsky'
-import {Voinov} from "./pages/Voinov"
-import {Phomin} from "./pages/Phomin"
-import {Ananich} from "./pages/Ananich"
-import {Grigorev} from "./pages/Grigorev"
-import {Navbar} from './components/Navbar'
-import {Footer} from './components/Footer'
+import Home from './pages/Home'
+import People from './pages/People'
+import Levin from './pages/Levin'
+import Zaborsky from './pages/Zaborsky'
+import Voinov from "./pages/Voinov"
+import Phomin from "./pages/Phomin"
+import Ananich from "./pages/Ananich"
+import Grigorev from "./pages/Grigorev"
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 function App() {
   return (

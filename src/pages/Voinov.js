@@ -10,6 +10,7 @@ import Theatre from '../images/Theatre.jpg'
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
 import { YMaps, Map, Placemark } from "react-yandex-maps"
 import YouTube from 'react-youtube';
+import {useTranslation} from "react-i18next";
 
 
 class MediaPlayerComponent extends Component {
@@ -28,17 +29,19 @@ class MediaPlayerComponent extends Component {
     }
 }
 
-export const Voinov = () => {
+function Voinov() {
+    const {t} = useTranslation();
     return (
         <Fragment>
             <div className='person_page'>
                 <div className='main_info'>
                     <div className= 'text_info'>
-                        <h2>Воинов Александр Петрович</h2>
+                        <h2>{t("voinov.name")}</h2>
                         <p>1902-1987</p>
                         <div className='main_text'>
-                        <p>Архитектор, автор здания ЦК КПБ (Администрации Президента Республики Беларусь).<br/>
-                        Член-корреспондент НАН Беларуси. Профессор. Заслуженный деятель искусств БССР, заслуженный строитель БССР.</p>
+                        <p>{t("voinov.description_1")}<br/>
+                        {t("voinov.description_2")}<br/>
+                        {t("voinov.description_3")}</p>
                         </div>
                     </div>
                     <div className='person_picture'>
@@ -51,59 +54,59 @@ export const Voinov = () => {
                         key="001"
                         dateText=" 03/12/1902"
                         style={{ color: '#e86971' }}>
-                            <h5>Родился в Колпино (Санкт-Петербургская губерния)</h5>
+                            <h5>{t("voinov.timeline_1")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="002"
                         dateText="1929"
                         style={{ color: '#e86971' }}>
-                            <h5>Окончил Московский высший художественно-технический институт</h5>
+                            <h5>{t("voinov.timeline_2")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="003"
                         dateText="1930 - 1941"
                         style={{ color: '#e86971' }}>
-                            <h5>Работал в Минске: архитектор Белжилсоюза, заведующий сектора в белорусских филиалах Гипрогора РСФСР, директор Белгоспроекта, руководитель архитектурной мастерской</h5>
+                            <h5>{t("voinov.timeline_3")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="004"
                         dateText="1941 - 1949"
                         style={{ color: '#e86971' }}>
-                            <h5>Председатель правления Союза архитекторов БССР</h5>
+                            <h5>{t("voinov.timeline_4")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="005"
-                        dateText="С 1943"
+                        dateText={t("date") + " 1943"}
                         style={{ color: '#e86971' }}>
-                            <h5>Начальник Управления по делам архитектуры при СНК БССР</h5>
+                            <h5>{t("voinov.timeline_5")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="006"
-                        dateText="С 1945"
+                        dateText={t("date") + " 1945"}
                         style={{ color: '#e86971' }}>
-                            <h5>Руководитель архитектурной мастерской в Белгоспроекте</h5>
+                            <h5>{t("voinov.timeline_6")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="007"
                         dateText="1948"
                         style={{ color: '#e86971' }}>
-                            <h5>Заведующий кафедрой архитектуры</h5>
+                            <h5>{t("voinov.timeline_7")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="008"
                         dateText="1973"
                         style={{ color: '#e86971' }}>
-                            <h5>Профессор-консультант Белорусского политехнического института</h5>
+                            <h5>{t("voinov.timeline_8")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="009"
                         dateText="01/10/1987"
                         style={{ color: '#e86971' }}>
-                            <h5>Смерть</h5>
+                            <h5>{t("voinov.timeline_9")}</h5>
                         </TimelineItem>
                     </Timeline>
                 </div>
-                <h4>Наиболее значимые работы</h4>
+                <h4>{t("voinov.works")}</h4>
                 <div className='image_galery'>
                         <img src={Belarus} className="galery_photo" alt=""/>
                         <img src={Dvorec} className="galery_photo" alt=""/>
@@ -117,7 +120,7 @@ export const Voinov = () => {
                 </div>
                 <div className="maps">
                     <YMaps query={{mode: 'release'}}>
-                        <h4>Работы Воинова А.П. на карте</h4>
+                        <h4>{t("voinov.map")}</h4>
                         <Map
                         width="60vw"
                         height="50vh" 
@@ -138,3 +141,5 @@ export const Voinov = () => {
 
     )
 }
+
+export default Voinov

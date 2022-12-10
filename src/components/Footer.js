@@ -3,7 +3,10 @@ import Nika from "../images/Nika.jpg"
 import Kris from "../images/Kris.jpg"
 import Yana from "../images/Yana.png"
 import './Footer.scss'
-export const Footer = () => {
+import {useTranslation} from "react-i18next";
+
+function Footer() {
+   const {t} = useTranslation();
     return (
         <Fragment>
          <div className="Footer">
@@ -11,31 +14,31 @@ export const Footer = () => {
              <div class="row">
                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                  <h6 class="text-uppercase fw-bold mb-4">
-                  <i class="fas fa-gem me-3"></i>О проекте
+                  <i class="fas fa-gem me-3"></i>{t('footer.about_project')}
                  </h6>
                  <p>
-                 Учебный пример сайта на базе<br/> библиотеки React, посвященный белорусским архитекторам.
+                 {t("footer.project_description_1")}<br/> {t("footer.project_description_2")}
                  </p>
                  </div>
               <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"> 
                  <h6 class="text-uppercase fw-bold mb-4">
-                  О разработчиках
+                     {t('footer.about_developers')}
                   </h6>
                   <div className='Developer'>
                    <p>
-                      <a href="https://github.com/Silvernika" class="text-reset">Павлюченко Ника</a>
+                      <a href="https://github.com/Silvernika" class="text-reset">{t("footer.nika")}</a>
                    </p>
                    <img src={Nika} className="Avatar" alt="Avatar"/>
                    </div>
                    <div className='Developer'>
                    <p>
-                      <a href="https://github.com/Krist1e" class="text-reset">Алексеева Кристина</a>
+                      <a href="https://github.com/Krist1e" class="text-reset">{t("footer.kristina")}</a>
                    </p>
                    <img src={Kris} className="Avatar" alt="Avatar"/>
                    </div>
                    <div className='Developer'>
                    <p>
-                      <a href="https://github.com/YanaOnuchina" class="text-reset">Онучина Яна</a>
+                      <a href="https://github.com/YanaOnuchina" class="text-reset">{t("footer.yana")}</a>
                    </p>
                    <img src={Yana}className="Avatar" alt="Avatar"/>
                    </div>
@@ -48,3 +51,5 @@ export const Footer = () => {
 
     )
 }
+
+export default Footer

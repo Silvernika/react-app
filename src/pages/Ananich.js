@@ -10,7 +10,7 @@ import Build6 from '../images/Ananich_build6.jpg'
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
 import { YMaps, Map, Placemark } from "react-yandex-maps"
 import YouTube from 'react-youtube';
-
+import {useTranslation} from "react-i18next";
 
 class MediaPlayerComponent extends Component {
     render() {
@@ -28,19 +28,20 @@ class MediaPlayerComponent extends Component {
     }
 }
 
-export const Ananich = () => {
+function Ananich() {
+    const {t} = useTranslation();
     return (
         <Fragment>
             <div className='person_page'>
                 <div className='main_info'>
                     <div className= 'text_info'>
-                        <h2>Ананич Юрий Степанович</h2>
+                        <h1>{t("ananich.name")}</h1>
                         <p>1955-2015</p>
                         <div className='main_text'>
-                            <p>Белорусский архитектор. Внёс вклад в формирование<br/>
-                            архитектурного облика современного Минска и других белорусских городов.<br/>
-                            Член Белорусского союза архитекторов. Автор Жилого комплекса посольства<br/>
-                            Российской федерации в Беларуси по улице Орловской в Минске (2007)</p>
+                            <p>{t("ananich.description_1")}<br/>
+                            {t("ananich.description_2")}<br/>
+                            {t("ananich.description_3")}<br/>
+                            {t("ananich.description_4")}</p>
                         </div>
                     </div>
                     <div className='person_picture'>
@@ -53,47 +54,47 @@ export const Ananich = () => {
                         key="001"
                         dateText="23/11/1955"
                         style={{ color: '#e86971' }}>
-                            <h5>Рождение</h5>
+                            <h5>{t("ananich.timeline_1")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="002"
                         dateText="1978"
                         style={{ color: '#e86971' }}>
-                            <h5>Закончил архитектурный факультет Белорусского государственного политехнического института</h5>
+                            <h5>{t("ananich.timeline_2")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="003"
                         dateText="2002"
                         style={{ color: '#e86971' }}>
-                            <h5>Реконструкция здания Национального банка Республики Беларусь</h5>
+                            <h5>{t("ananich.timeline_3")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="004"
                         dateText="2004"
                         style={{ color: '#e86971' }}>
-                            <h5>Построен головной офис BSB-Банк по улице Заславской в Минске</h5>
+                            <h5>{t("ananich.timeline_4")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="005"
                         dateText="2007"
                         style={{ color: '#e86971' }}>
-                            <h5>Построен жилой комплекс посольства Российской федерации в Республике Беларусь </h5>
+                            <h5>{t("ananich.timeline_5")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="006"
                         dateText="2008"
                         style={{ color: '#e86971' }}>
-                            <h5>Застройка территории, прилегающей к Национальной библиотеке РБ</h5>
+                            <h5>{t("ananich.timeline_6")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="007"
                         dateText="28/02/2015"
                         style={{ color: '#e86971' }}>
-                            <h5>Трагически погиб на железнодорожной станции Птичь</h5>
+                            <h5>{t("ananich.timeline_7")}</h5>
                         </TimelineItem>
                     </Timeline>
                 </div>
-                <h4>Наиболее значимые работы</h4>
+                <h4>{t("ananich.works")}</h4>
                 <div className='image_galery'>
                         <img src={Build1} className="galery_photo" alt=""/>
                         <img src={Build2} className="galery_photo" alt=""/>
@@ -107,7 +108,7 @@ export const Ananich = () => {
                 </div>
                 <div className="maps">
                     <YMaps query={{mode: 'release'}}>
-                        <h4>Работы Ананича Ю.С. на карте</h4>
+                        <h4>{t("ananich.map")}</h4>
                         <Map
                         width="60vw"
                         height="50vh" 
@@ -126,3 +127,5 @@ export const Ananich = () => {
 
     )
 }
+
+export default Ananich;

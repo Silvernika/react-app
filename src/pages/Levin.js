@@ -10,6 +10,7 @@ import Subway from '../images/Nyamiga.jpg'
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
 import { YMaps, Map, Placemark } from "react-yandex-maps"
 import YouTube from 'react-youtube';
+import {useTranslation} from "react-i18next";
 
 
 class MediaPlayerComponent extends Component {
@@ -30,22 +31,23 @@ class MediaPlayerComponent extends Component {
 
 
 
-export const Levin = () => {
+function Levin() {
+    const {t} = useTranslation();
     return (
         <Fragment>
             <div className='person_page'>
                 <div className='main_info'>
                     <div className= 'text_info'>
-                        <h2>Левин Леонид Менделеевич</h2>
+                        <h2>{t("levin.name")}</h2>
                         <p>1936-2014</p>
                         <div className='main_text'>
-                            <p>Заслуженный архитектор Республики Беларусь, Лауреат Ленинской премии<br/>
-                            и премии Ленинского комсомола, Лауреат премии Волгоградского Комсомола,
-                            дважды лауреат Государственной премии Республики Беларусь, лауреат многих престижных конкурсов<br/>
-                            и смотров архитектурных работ, Академик Международной и Белорусской Академий архитектуры,<br/>
-                            Председатель Союза белорусских еврейских общественных объединений и общин с 1991 года.<br/>
-                            Один из авторов мемориального комплекса «Хатынь»,<br/>
-                            за который (в составе авторского коллектива) был удостоен Ленинской премии.</p>
+                            <p>{t("levin.description_1")}<br/>
+                            {t("levin.description_2")}
+                            {t("levin.description_3")}<br/>
+                            {t("levin.description_4")}<br/>
+                            {t("levin.description_5")}<br/>
+                            {t("levin.description_6")}<br/>
+                            </p>
                         </div>
                     </div>
                     <div className='person_picture'>
@@ -58,53 +60,53 @@ export const Levin = () => {
                         key="001"
                         dateText="25/07/1936"
                         style={{ color: '#e86971' }}>
-                            <h5>Рождение</h5>
+                            <h5>{t("levin.timeline_1")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="002"
                         dateText="1954 - 1960"
                         style={{ color: '#e86971' }}>
-                            <h5>Учёба в Белорусском политехническом институте</h5>
+                            <h5>{t("levin.timeline_2")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="003"
-                        dateText="С 1960"
+                        dateText={t("date") + " 1960"}
                         style={{ color: '#e86971' }}>
-                            <h5>Работа в институте «Минскпроект»</h5>
+                            <h5>{t("levin.timeline_3")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="004"
                         dateText="1960 - 1967"
                         style={{ color: '#e86971' }}>
-                            <h5>Участие в создании парка им. 50-летия Советской власти</h5>
+                            <h5>{t("levin.timeline_4")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="005"
                         dateText="1968"
                         style={{ color: '#e86971' }}>
-                            <h5>Участие в создании выставочного павильона ВДНХ БССР в Минске</h5>
+                            <h5>{t("levin.timeline_5")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="006"
                         dateText="1970"
                         style={{ color: '#e86971' }}>
-                            <h5>Удостоен Ленинской премии за мемориальный комплекс «Хатынь»</h5>
+                            <h5>{t("levin.timeline_6")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="007"
-                        dateText="С 1997"
+                        dateText={t("date") + " 1997"}
                         style={{ color: '#e86971' }}>
-                            <h5>Директор собственной творческой мастерской УП «Творческая мастерская архитектора Л. Левина»</h5>
+                            <h5>{t("levin.timeline_7")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="008"
                         dateText="01/03/2014"
                         style={{ color: '#e86971' }}>
-                            <h5>Смерть</h5>
+                            <h5>{t("levin.timeline_8")}</h5>
                         </TimelineItem>
                     </Timeline>
                 </div>
-                <h4>Наиболее значимые работы</h4>
+                <h4>{t("levin.works")}</h4>
                 <div className='image_galery'>
                     {/* <div className='galery_row'> */}
                         <img src={Hatyn} className="galery_photo" alt="hatyn"/>
@@ -122,7 +124,7 @@ export const Levin = () => {
                 </div>
                 <div className="maps">
                     <YMaps query={{mode: 'release'}}>
-                        <h4>Работы Левина Л.М. на карте</h4>
+                        <h4>{t("levin.map")}</h4>
                         <Map
                         width="60vw"
                         height="50vh" 
@@ -141,3 +143,5 @@ export const Levin = () => {
         </Fragment>
     )
 }
+
+export default Levin

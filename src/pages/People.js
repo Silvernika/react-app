@@ -6,20 +6,23 @@ import Phomin from "../images/Phomin.png"
 import Ananich from "../images/Ananich.jpg"
 import Grigorev from "../images/Grigorev.jpg"
 import Levin from "../images/levin.jpg"
-export const People = () => {
+import {useTranslation} from "react-i18next";
+
+function People() { 
+  const {t} = useTranslation();
     return (
         <Fragment>
             <div className='People_page'>
-            <h1 class="display-4 text-center">Список архитекторов</h1>
+            <h1 class="display-4 text-center">{t("people.title")}</h1>
              <div className='Person'>
                 <div className='Name'>
-                  <h3>Заборский Георгий Владимирович</h3>
+                  <h3>{t("zaborsky.name")}</h3>
                   <p>1909-1999</p>
                 <div className='information'>
-                 <p>Белорусский архитектор. Народный архитектор СССР (1981), заслуженный строитель Беларуси,<br/>
-                 академик Российской академии архитектуры и строительных наук, лауреат Государственной премии СССР (1971).<br/>
-                 Автор проекта памятника-монумента на площади Победы</p>
-                 <a href="/Zaborsky" class="link-primary">Читать полностью</a>
+                 <p>{t("zaborsky.description_1")}<br/>
+                 {t("zaborsky.description_2")}<br/>
+                 {t("zaborsky.description_3")}</p>
+                 <a href="/Zaborsky" class="link-primary">{t("people.read_more")}</a>
                 </div>
                </div>
                <div className='picture'>
@@ -28,12 +31,13 @@ export const People = () => {
              </div>
              <div className='Person'>
                 <div className='Name'>
-                  <h3>Воинов Александр Петрович</h3>
+                  <h3>{t("voinov.name")}</h3>
                   <p>1902-1987</p>
                 <div className='information'>
-                 <p>Архитектор, автор здания ЦК КПБ (Администрации Президента Республики Беларусь).<br/>
-                  Член-корреспондент НАН Беларуси. Профессор. Заслуженный деятель искусств БССР, заслуженный строитель БССР.</p>
-                 <a href="/Voinov" class="link-primary">Читать полностью</a>
+                <p>{t("voinov.description_1")}<br/>
+                        {t("voinov.description_2")}<br/>
+                        {t("voinov.description_3")}</p>
+                 <a href="/Voinov" class="link-primary">{t("people.read_more")}</a>
                 </div>
                </div>
                <div className='picture'>
@@ -42,14 +46,14 @@ export const People = () => {
              </div>
              <div className='Person'>
                 <div className='Name'>
-                  <h3>Фомин Игорь Иванович</h3>
+                  <h3>{t("phomin.name")}</h3>
                   <p>1904-1989</p>
                 <div className='information'>
-                 <p>Советский архитектор, педагог. Член Союза архитекторов СССР (1933).<br/>
-                  Член-корреспондент Академии архитектуры СССР (1941–1955), член Академии<br/>
-                  строительства и архитектуры СССР (1951–1963). Народный архитектор СССР (1971).<br/>
-                  Член-корреспондент АХ (1979). Автор Дома Правительства БССР</p>
-                 <a href="/Phomin" class="link-primary">Читать полностью</a>
+                 <p>{t("phomin.description_1")}<br/>
+                 {t("phomin.description_2")}<br/>
+                 {t("phomin.description_3")}<br/>
+                 {t("phomin.description_4")}</p>
+                 <a href="/Phomin" class="link-primary">{t("people.read_more")}</a>
                 </div>
                </div>
                <div className='picture'>
@@ -58,14 +62,14 @@ export const People = () => {
              </div>
              <div className='Person'>
                 <div className='Name'>
-                  <h3>Ананич Юрий Степанович</h3>
+                  <h3>{t("ananich.name")}</h3>
                   <p>1955-2015</p>
                 <div className='information'>
-                 <p>Белорусский архитектор. Внёс вклад в формирование<br/>
-                  архитектурного облика современного Минска и других белорусских городов.<br/>
-                  Член Белорусского союза архитекторов. Автор Жилого комплекса посольства<br/>
-                  Российской федерации в Беларуси по улице Орловской в Минске (2007)</p>
-                 <a href="/Ananich" class="link-primary">Читать полностью</a>
+                 <p>{t("ananich.description_1")}<br/>
+                 {t("ananich.description_2")}<br/>
+                 {t("ananich.description_3")}<br/>
+                 {t("ananich.description_4")}</p>
+                 <a href="/Ananich" class="link-primary">{t("people.read_more")}</a>
                 </div>
                </div>
                <div className='picture'>
@@ -74,14 +78,14 @@ export const People = () => {
              </div>
              <div className='Person'>
                 <div className='Name'>
-                  <h3>Григорьев Юрий Пантелеймонович </h3>
+                  <h3>{t("grigorev.name")}</h3>
                   <p>1932-2019</p>
                 <div className='information'>
-                 <p>Заслуженный архитектор РФ (1993г.), Почётный строитель России (1998г.)<br/>
-                  и г.Москвы (1999г.), Почётный архитектор России (2001г.), Заслуженный архитектор<br/>
-                  Республики Беларусь (2007г.), Народный архитектор РФ (2008г.)<br/>
-                  Автор Дома Литераторов.</p>
-                 <a href="/Grigorev" class="link-primary">Читать полностью</a>
+                 <p>{t("grigorev.description_1")}<br/>
+                 {t("grigorev.description_2")}<br/>
+                 {t("grigorev.description_3")}<br/>
+                 {t("grigorev.description_4")}</p>
+                 <a href="/Grigorev" class="link-primary">{t("people.read_more")}</a>
                 </div>
                </div>
                <div className='picture'>
@@ -90,17 +94,16 @@ export const People = () => {
              </div>
              <div className='Person'>
               <div className='Name'>
-                <h3>Левин Леонид Менделеевич</h3>
+                <h3>{t("levin.name")}</h3>
                 <p>1936-2014</p>
                <div className='title_information'>
-                <p>Заслуженный архитектор Республики Беларусь, Лауреат Ленинской премии<br/>
-                и премии Ленинского комсомола, Лауреат премии Волгоградского Комсомола,
-                дважды лауреат Государственной премии Республики Беларусь, лауреат многих престижных конкурсов<br/>
-                и смотров архитектурных работ, Академик Международной и Белорусской Академий архитектуры,<br/>
-                Председатель Союза белорусских еврейских общественных объединений и общин с 1991 года.<br/>
-                Один из авторов мемориального комплекса «Хатынь»,<br/>
-                за который (в составе авторского коллектива) был удостоен Ленинской премии.</p>
-                 <a href="/Levin" class="link-primary">Читать полностью</a>
+                <p>{t("levin.description_1")}<br/>
+                {t("levin.description_2")}
+                {t("levin.description_3")}<br/>
+                {t("levin.description_4")}<br/>
+                {t("levin.description_5")}<br/>
+                {t("levin.description_6")}</p>
+                 <a href="/Levin" class="link-primary">{t("people.read_more")}</a>
                 </div>
                </div>
               <div className='picture'>
@@ -112,3 +115,5 @@ export const People = () => {
 
     )
 }
+
+export default People;

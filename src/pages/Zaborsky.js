@@ -10,6 +10,7 @@ import Pioneer from '../images/pioneer.jpg'
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
 import { YMaps, Map, Placemark } from "react-yandex-maps"
 import YouTube from 'react-youtube';
+import { useTranslation } from 'react-i18next';
 
 
 class MediaPlayerComponent extends Component {
@@ -27,18 +28,19 @@ class MediaPlayerComponent extends Component {
     event.target.pauseVideo();
     }
 }
-export const Zaborsky = () => {
+function Zaborsky() {
+    const { t } = useTranslation();
     return (
         <Fragment>
             <div className='person_page'>
                 <div className='main_info'>
                     <div className= 'text_info'>
-                        <h2>Заборский Георгий Владимирович</h2>
+                        <h2>{t("zaborsky.name")}</h2>
                         <p>1909-1999</p>
                         <div className='main_text'>
-                        <p>Белорусский архитектор. Народный архитектор СССР (1981), заслуженный строитель Беларуси,<br/>
-                        академик Российской академии архитектуры и строительных наук, лауреат Государственной премии СССР (1971).<br/>
-                        Автор проекта памятника-монумента на площади Победы</p>
+                        <p>{t("zaborsky.description_1")}<br/>
+                        {t("zaborsky.description_2")}<br/>
+                        {t("zaborsky.description_3")}</p>
                         </div>
                     </div>
                     <div className='person_picture'>
@@ -51,59 +53,59 @@ export const Zaborsky = () => {
                         key="001"
                         dateText=" 29/10/1909"
                         style={{ color: '#e86971' }}>
-                            <h5>Родился в Минске</h5>
+                            <h5>{t("zaborsky.timeline_1")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="002"
                         dateText="1933"
                         style={{ color: '#e86971' }}>
-                            <h5>Был направлен в Ленинградский институт живописи, скульптуры и архитектуры</h5>
+                            <h5>{t("zaborsky.timeline_2")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="003"
                         dateText="1939"
                         style={{ color: '#e86971' }}>
-                            <h5>Окончил институт</h5>
+                            <h5>{t("zaborsky.timeline_3")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="004"
                         dateText="1945 - 1964"
                         style={{ color: '#e86971' }}>
-                            <h5>Руководил архитектурно-конструкторскими мастерскими проектных институтов Белгоспроект и Минскпроект и преподавал на архитектурном отделении Белорусского политехнического института</h5>
+                            <h5>{t("zaborsky.timeline_4")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="005"
                         dateText="1950"
                         style={{ color: '#e86971' }}>
-                            <h5>Занимался проектированием жилой застройки по улице Ленина в Минске</h5>
+                            <h5>{t("zaborsky.timeline_5")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="006"
                         dateText="1952"
                         style={{ color: '#e86971' }}>
-                            <h5>Спроектировал дом для семьи Я.Коласа</h5>
+                            <h5>{t("zaborsky.timeline_6")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="007"
                         dateText="1971"
                         style={{ color: '#e86971' }}>
-                            <h5>Получил Государственную премию СССР</h5>
+                            <h5>{t("zaborsky.timeline_7")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="008"
                         dateText="1990"
                         style={{ color: '#e86971' }}>
-                            <h5>Закончил практическую творческую деятельность</h5>
+                            <h5>{t("zaborsky.timeline_8")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="009"
                         dateText="27/03/1999"
                         style={{ color: '#e86971' }}>
-                            <h5>Умер.Похоронен на Восточном кладбище</h5>
+                            <h5>{t("zaborsky.timeline_9")}</h5>
                         </TimelineItem>
                     </Timeline>
                 </div>
-                <h4>Наиболее значимые работы</h4>
+                <h4>{t("zaborsky.works")}</h4>
                 <div className='image_galery'>
                         <img src={KastrychnickajaSquare} className="galery_photo" alt=""/>
                         <img src={Kolas} className="galery_photo" alt=""/>
@@ -117,7 +119,7 @@ export const Zaborsky = () => {
                 </div>
                 <div className="maps">
                     <YMaps query={{mode: 'release'}}>
-                        <h4>Работы Заборского Г.В. на карте</h4>
+                        <h4>{t("zaborsky.map")}</h4>
                         <Map
                         width="60vw"
                         height="50vh" 
@@ -137,3 +139,5 @@ export const Zaborsky = () => {
 
     )
 }
+
+export default Zaborsky

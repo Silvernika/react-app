@@ -10,7 +10,7 @@ import Subway from '../images/MetroVosstaniya.jpg'
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
 import { YMaps, Map, Placemark } from "react-yandex-maps"
 import YouTube from 'react-youtube';
-
+import {useTranslation} from "react-i18next";
 
 class MediaPlayerComponent extends Component {
     render() {
@@ -27,19 +27,20 @@ class MediaPlayerComponent extends Component {
     event.target.pauseVideo();
     }
 }
-export const Phomin = () => {
+function Phomin() {
+    const {t} = useTranslation();
     return (
         <Fragment>
             <div className='person_page'>
                 <div className='main_info'>
                     <div className= 'text_info'>
-                        <h2>Фомин Игорь Иванович</h2>
+                        <h2>{t("phomin.name")}</h2>
                         <p>1904-1989</p>
                         <div className='main_text'>
-                            <p>Советский архитектор, педагог. Член Союза архитекторов СССР (1933).<br/>
-                            Член-корреспондент Академии архитектуры СССР (1941–1955), член Академии<br/>
-                            строительства и архитектуры СССР (1951–1963). Народный архитектор СССР (1971).<br/>
-                            Член-корреспондент АХ (1979). Автор Дома Правительства БССР</p>
+                            <p>{t("phomin.description_1")}<br/>
+                            {t("phomin.description_2")}<br/>
+                            {t("phomin.description_3")}<br/>
+                            {t("phomin.description_4")}</p>
                         </div>
                     </div>
                     <div className='person_picture'>
@@ -52,47 +53,47 @@ export const Phomin = () => {
                         key="001"
                         dateText=" 20/01/1904"
                         style={{ color: '#e86971' }}>
-                            <h5>Родился в Москве</h5>
+                            <h5>{t("phomin.timeline_1")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="002"
                         dateText="1920 - 1921"
                         style={{ color: '#e86971' }}>
-                            <h5>Учился на математическом факультете Ленинградского университета</h5>
+                            <h5>{t("phomin.timeline_2")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="003"
                         dateText="1924"
                         style={{ color: '#e86971' }}>
-                            <h5>Зачислен на 3-й курс архитектурного факультета</h5>
+                            <h5>{t("phomin.timeline_3")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="004"
                         dateText="1934 - 1950"
                         style={{ color: '#e86971' }}>
-                            <h5>Преподавал в Ленинградском институте инженеров коммунального строительства</h5>
+                            <h5>{t("phomin.timeline_4")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="005"
                         dateText="1946 - 1948"
                         style={{ color: '#e86971' }}>
-                            <h5>Совместно со своим учеником Б.Н. Журавлёвым построил заново здание дома Лопатина по Невскому проспекту № 68</h5>
+                            <h5>{t("phomin.timeline_5")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="006"
                         dateText="1951 - 1968"
                         style={{ color: '#e86971' }}>
-                            <h5>Был заместителем главного архитектора Ленинграда</h5>
+                            <h5>{t("phomin.timeline_6")}</h5>
                         </TimelineItem>
                         <TimelineItem
                         key="007"
                         dateText="16/06/1989"
                         style={{ color: '#e86971' }}>
-                            <h5>Умер в Ленинграде. Похоронен на Волковском православном кладбище</h5>
+                            <h5>{t("phomin.timeline_7")}</h5>
                         </TimelineItem>
                     </Timeline>
                 </div>
-                <h4>Наиболее значимые работы</h4>
+                <h4>{t("phomin.works")}</h4>
                 <div className='image_galery'>
                         <img src={GouvernementHouse} className="galery_photo" alt=""/>
                         <img src={Hospital} className="galery_photo" alt=""/>
@@ -106,7 +107,7 @@ export const Phomin = () => {
                 </div>
                 <div className="maps">
                     <YMaps query={{mode: 'release'}}>
-                        <h4>Работы Фомина И.И. на карте</h4>
+                        <h4>{t("phomin.map")}</h4>
                         <Map
                         width="60vw"
                         height="50vh" 
@@ -126,3 +127,5 @@ export const Phomin = () => {
 
     )
 }
+
+export default Phomin
