@@ -15,7 +15,7 @@ function Navbar() {
         <ul className="navbar-nav">
             <li className="nav-item">
                 <NavLink className="nav-link" 
-                to="/">{t("navbar.home")}</NavLink>
+                to="/react-app/">{t("navbar.home")}</NavLink>
             </li>
             <li className="nav-item">
                 <NavLink className="nav-link" 
