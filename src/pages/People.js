@@ -66,7 +66,7 @@ function People() {
               <p>{t("zaborsky.description_1")}<br/>
               {t("zaborsky.description_2")}<br/>
               {t("zaborsky.description_3")}</p>
-              <a href="/Zaborsky" class="link-primary">{t("people.read_more")}</a>
+              <a href="/react-app/Zaborsky" class="link-primary">{t("people.read_more")}</a>
              </div>
             </div>
             <div className='picture'>
@@ -81,7 +81,7 @@ function People() {
              <p>{t("voinov.description_1")}<br/>
                      {t("voinov.description_2")}<br/>
                      {t("voinov.description_3")}</p>
-              <a href="/Voinov" class="link-primary">{t("people.read_more")}</a>
+              <a href="/react-app/Voinov" class="link-primary">{t("people.read_more")}</a>
              </div>
             </div>
             <div className='picture'>
@@ -97,7 +97,7 @@ function People() {
               {t("phomin.description_2")}<br/>
               {t("phomin.description_3")}<br/>
               {t("phomin.description_4")}</p>
-              <a href="/Phomin" class="link-primary">{t("people.read_more")}</a>
+              <a href="/react-app/Phomin" class="link-primary">{t("people.read_more")}</a>
              </div>
             </div>
             <div className='picture'>
@@ -113,7 +113,7 @@ function People() {
               {t("ananich.description_2")}<br/>
               {t("ananich.description_3")}<br/>
               {t("ananich.description_4")}</p>
-              <a href="/Ananich" class="link-primary">{t("people.read_more")}</a>
+              <a href="/react-app/Ananich" class="link-primary">{t("people.read_more")}</a>
              </div>
             </div>
             <div className='picture'>
@@ -129,7 +129,7 @@ function People() {
               {t("grigorev.description_2")}<br/>
               {t("grigorev.description_3")}<br/>
               {t("grigorev.description_4")}</p>
-              <a href="/Grigorev" class="link-primary">{t("people.read_more")}</a>
+              <a href="/react-app/Grigorev" class="link-primary">{t("people.read_more")}</a>
              </div>
             </div>
             <div className='picture'>
@@ -147,7 +147,7 @@ function People() {
              {t("levin.description_4")}<br/>
              {t("levin.description_5")}<br/>
              {t("levin.description_6")}</p>
-              <a href="/Levin" class="link-primary">{t("people.read_more")}</a>
+              <a href="/react-app/Levin" class="link-primary">{t("people.read_more")}</a>
              </div>
             </div>
            <div className='picture'>

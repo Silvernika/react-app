@@ -17,14 +17,14 @@ function App() {
     <Navbar/>
     <div className="containers">
       <Routes>
-        <Route path={'/'} exact element={<Home/>} />
-        <Route path={'/People'} element={<People/>}/>
-        <Route path={'/Levin'} element={<Levin/>}/>
-        <Route path={'/Zaborsky'} element={<Zaborsky/>}/>
-        <Route path={'/Voinov'} element={<Voinov/>}/>
-        <Route path={'/Phomin'} element={<Phomin/>}/>
-        <Route path={'/Ananich'} element={<Ananich/>}/>
-        <Route path={'/Grigorev'} element={<Grigorev/>}/>
+        <Route path={'/react-app/'} exact element={<Home/>} />
+        <Route path={'/react-app/People'} element={<People/>}/>
+        <Route path={'/react-app/Levin'} element={<Levin/>}/>
+        <Route path={'/react-app/Zaborsky'} element={<Zaborsky/>}/>
+        <Route path={'/react-app/Voinov'} element={<Voinov/>}/>
+        <Route path={'/react-app/Phomin'} element={<Phomin/>}/>
+        <Route path={'/react-app/Ananich'} element={<Ananich/>}/>
+        <Route path={'/react-app/Grigorev'} element={<Grigorev/>}/>
       </Routes>
     </div>
     <Footer/>
