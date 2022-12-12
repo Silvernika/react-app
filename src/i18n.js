@@ -94,7 +94,8 @@ i18n
                 name: "Voinov Alexander Petrovich",
                 description_1: "Architect, author of the building of the Central Committee of the CPB",
                 description_2: "(Administration of the President of the Republic of Belarus).",
-                description_3: "Corresponding Member of the National Academy of Sciences of Belarus. Professor. Honored Artist of the BSSR, Honored Builder of the BSSR.",
+                description_3: "Corresponding Member of the National Academy of Sciences of Belarus. Professor. Honored Artist of the BSSR,",
+                description_4: "Honored Builder of the BSSR.",
                 timeline_1: "Born in Kolpino (Saint Petersburg province)",
                 timeline_2: "Graduated from the Moscow Higher Art and Technical Institute",
                 timeline_3: "Worked in Minsk: architect of the Belzhilsoyuz, head of the sector in the Belarusian branches of Giprogor RSFSR, director of the Belgosproject, head of the architectural workshop",
@@ -139,6 +140,10 @@ i18n
                 timeline_9: "Died. He was buried in the Eastern Cemetery",
                 works: "The most significant works",
                 map: "Works of G.V. Zaborsky on the map",
+            },
+            search: {
+                placeholder: "Find architect",
+                button: "Search",
             }
         }
       },
@@ -224,7 +229,8 @@ i18n
                 name: "Воинов Александр Петрович",
                 description_1: "Архитектор, автор здания ЦК КПБ ",
                 description_2: "(Администрации Президента Республики Беларусь).",
-                description_3: "Член-корреспондент НАН Беларуси. Профессор. Заслуженный деятель искусств БССР, заслуженный строитель БССР.",
+                description_3: "Член-корреспондент НАН Беларуси. Профессор. Заслуженный деятель искусств БССР,",
+                description_4: " заслуженный строитель БССР.",
                 timeline_1: "Родился в Колпино (Санкт-Петербургская губерния)",
                 timeline_2: "Окончил Московский высший художественно-технический институт",
                 timeline_3: "Работал в Минске: архитектор Белжилсоюза, заведующий сектора в белорусских филиалах Гипрогора РСФСР, директор Белгоспроекта, руководитель архитектурной мастерской",
@@ -269,7 +275,11 @@ i18n
                 timeline_9: "Умер. Похоронен на Восточном кладбище",
                 works: "Наиболее значимые работы",
                 map: "Работы Заборского Г.В. на карте",
-            }
+            },
+            search: {
+                placeholder: "Найти архитектора",
+                button: "Поиск",
+            },
         }
     }
     }

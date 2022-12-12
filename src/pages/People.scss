@@ -5,6 +5,24 @@
     background-image: url("../images/white-back.webp");
   }
 
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+    font-size: large;
+  }
+
+
+  .Container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 45px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .Person{
     padding-top:5%;
     padding-left: 15%;

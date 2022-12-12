@@ -41,7 +41,8 @@ function Voinov() {
                         <div className='main_text'>
                         <p>{t("voinov.description_1")}<br/>
                         {t("voinov.description_2")}<br/>
-                        {t("voinov.description_3")}</p>
+                        {t("voinov.description_3")}<br/>
+                        {t("voinov.description_4")}</p>
                         </div>
                     </div>
                     <div className='person_picture'>
