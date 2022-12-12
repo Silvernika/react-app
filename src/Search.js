@@ -7,9 +7,7 @@ const Search = ({ searchQuery, setSearchQuery }) => {
   const {t} = useTranslation();
   const navigate = useNavigate();
     const onSubmit = (e) => {
-      // use only first word of search query
         const query = searchQuery.split(' ')[0];
-        //english version
         if (query.toLowerCase() === 'levin' || query.toLowerCase() === 'левин') {
           navigate('/Levin');
         } else if (query.toLowerCase() === 'заборский' || query.toLowerCase() === 'zaborsky') {

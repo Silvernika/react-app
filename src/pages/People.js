@@ -10,35 +10,6 @@ import Levin from "../images/levin.jpg"
 import Search from "../Search"
 import { useState } from 'react';
 
-// import people from "./people.json";
-// import SearchBar from "../Search";
-// import Fuse from "fuse.js";
-// import { useState } from "react";
-
-// const Panel = ({ name, date, description1, description2, description3, description4, link, picture }) => {
-//   const { t } = useTranslation();
-//   return (
-//     <div className="Person">
-//       <div className="Name">
-//         <p className="Title">{t(name)}</p>
-//         <p>{date}</p>
-//         <div className="information">
-//           <p>{t(description1)}<br/>
-//           {t(description2)}<br/>
-//           {t(description3)}<br/>
-//           {t(description4)}<br/>
-//           </p>
-//           <a href={link} class="link-primary">
-//             {t("people.read_more")}
-//           </a>
-//         </div>
-//       </div>
-//       <div className="picture">
-//         <img src={picture} className="photo" alt="ph" />
-//       </div>
-//     </div>
-//   );
-// };
 const filterPosts = (names, query) => {
   if (!query) {
       return names;
@@ -70,28 +41,6 @@ function People() {
   const query = new URLSearchParams(search).get('s');
   const [searchQuery, setSearchQuery] = useState(query || '');
   const filteredPosts = filterPosts(names, searchQuery);
-  // const [data, setData] = useState(people);
-
-  // const searchData = (pattern) => {
-  //   if (!pattern) {
-  //     setData(people);
-  //     return;
-  //   }
-  //   const fuse = new Fuse(data, {
-  //     keys: ["name", "date"],
-  //   });
-
-  //   const result = fuse.search(pattern);
-  //   const matches = [];
-  //   if (!result.length) {
-  //     setData([]);
-  //   } else {
-  //     result.forEach(({item}) => {
-  //       matches.push(item);
-  //     });
-  //     setData(matches);
-  //   }
-  // };
   return (
          <Fragment>
          <div className='People_page'>
@@ -207,15 +156,6 @@ function People() {
           </div> 
         </div>
      </Fragment>
-        /* <SearchBar
-        placeholder="Search"
-        onChange={(e) => searchData(e.target.value)}
-       />
-        <div className="Container">
-          {people.map((item) => (
-            <Panel {...item} key={item.name} />
-          ))}
-        </div> */
   )
 }
 
