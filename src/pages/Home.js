@@ -23,7 +23,7 @@ function Home() {
               {t("levin.description_4")}<br/>
               {t("levin.description_5")}<br/>
               {t("levin.description_6")}</p>
-              <a href="/Levin" class="link-primary">{t("home.read_more")}</a>
+              <a href="/react-app/Levin" class="link-primary">{t("home.read_more")}</a>
             </div>
           </div>
           <div className='pic_of_day'>

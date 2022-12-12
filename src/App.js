@@ -19,7 +19,7 @@ function App() {
       <Routes>
         <Route path={'/react-app/'} exact element={<Home/>} />
         <Route path={'/People'} element={<People/>}/>
-        <Route path={'/Levin'} element={<Levin/>}/>
+        <Route path={'/react-app/Levin'} element={<Levin/>}/>
         <Route path={'/Zaborsky'} element={<Zaborsky/>}/>
         <Route path={'/Voinov'} element={<Voinov/>}/>
         <Route path={'/Phomin'} element={<Phomin/>}/>
